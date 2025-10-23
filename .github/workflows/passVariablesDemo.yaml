@@ -1,0 +1,14 @@
+name: Pass Variables Demo
+on: workflow_dispatch
+
+jobs:
+  share-variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create variable dynamically
+        run: |
+          MY_DATE=$(date +'%Y-%m-%d')
+          echo "BUILD_DATE=$MY_DATE"
+
+      - name: Use variable from previous step
+        run: echo "Build date is $BUILD_DATE"
