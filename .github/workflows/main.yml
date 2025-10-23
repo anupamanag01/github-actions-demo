@@ -18,3 +18,13 @@ jobs:
 
       - name: Print Hello Message2
         run: echo "👋 Hello Anupama"  
+
+      - name: Print Custom Message
+        run: |
+         echo "👋 Hello ${{ github.actor }}! Welcome to GitHub Actions."
+         echo "📝 Commit message: ${{ github.event.head_commit.message }}"
+         echo "💡 Branch name: ${{ github.ref_name }}"
+         echo "📁 Repository: ${{ github.repository }}"
+         echo "🧑 Committer: ${{ github.actor }}"
+      - name: Show all environment variables
+        run: printenv | sort
