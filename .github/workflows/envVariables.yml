@@ -1,0 +1,17 @@
+name: Env Demo Workflow
+
+on:
+  workflow_dispatch:
+
+env:
+  APP_NAME: "GitHub Demo"
+  BUILD_ENV: "Development"
+
+jobs:
+  show-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show env vars
+        run: |
+          echo "App Name is $APP_NAME"
+          echo "Build Environment is $BUILD_ENV"
