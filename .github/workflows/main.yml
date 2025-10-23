@@ -15,3 +15,6 @@ jobs:
 
       - name: Print Hello Message
         run: echo "👋 Hello from GitHub Actions!"
+
+      - name: Print Hello Message2
+        run: echo "👋 Hello Anupama"  
